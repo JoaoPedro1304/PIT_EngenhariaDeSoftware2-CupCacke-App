@@ -8,7 +8,7 @@ import router from './routes.js'
 
 const __dirname = path.resolve()
 
-const pgSession = connectPgSimple(session)
+const pgSession = connectPgSimple()
 
 const app = express()
 
