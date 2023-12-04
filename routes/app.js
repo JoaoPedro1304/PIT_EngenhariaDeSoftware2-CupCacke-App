@@ -12,8 +12,7 @@ const __dirname = path.resolve()
 const app = express()
 
 app.use(session({
-    secret:'oo_K(uOwN(k#|2Pm%+Sl>F(w/7k7|n',
-    resave: true,
+    secret:'oo_K(uOwN(k#|2Pm%+Sl>F(w/7k7|n',    
     saveUninitialized: true
 }))
 app.use(express.json())
