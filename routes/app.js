@@ -13,8 +13,8 @@ const app = express()
 
 app.use(session({
     store: new connectPgSimple({
-        session
-      }),
+        conString: process.env.CONNECTION_STRING,
+    }),
     secret:'oo_K(uOwN(k#|2Pm%+Sl>F(w/7k7|n',    
     resave: false,
     saveUninitialized: true,
