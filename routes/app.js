@@ -2,8 +2,7 @@ import express from "express";
 import session from 'express-session'
 import path from "path"
 import bodyParser from "body-parser";
-import connectPgSimple from ("connect-pg-simple")(session);
-
+import connectPgSimple from ("connect-pg-simple")
 import router from './routes.js'
 
 
