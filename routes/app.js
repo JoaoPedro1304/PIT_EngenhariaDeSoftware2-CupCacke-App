@@ -2,7 +2,7 @@ import express from "express";
 import session from 'express-session'
 import path from "path"
 import bodyParser from "body-parser";
-import connectPgSimple from ("connect-pg-simple")
+import connectPgSimple from 'connect-pg-simple'
 import router from './routes.js'
 
 
@@ -13,7 +13,7 @@ const app = express()
 
 app.use(session({
     store: new connectPgSimple({
-        conString: process.env.CONNECTION_STRING,
+        session
       }),
     secret:'oo_K(uOwN(k#|2Pm%+Sl>F(w/7k7|n',    
     resave: false,
