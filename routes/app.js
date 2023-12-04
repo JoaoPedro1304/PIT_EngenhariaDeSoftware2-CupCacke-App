@@ -27,7 +27,7 @@ app.use(bodyParser.urlencoded({ extended: true, limit:'2mb'}))
 
 //app.use(express.urlencoded({limit:'2mb'}))
 
-app.use(express.urlencoded({extended:true}))
+//app.use(express.urlencoded({extended:true}))
 
 app.use('/',router)
 
