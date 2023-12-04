@@ -8,21 +8,18 @@ import router from './routes.js'
 
 const __dirname = path.resolve()
 
-const pgSession = connectPgSimple()
+const pgSession = connectPgSimple(session)
 
 const app = express()
 
 app.use(session({
     store: new pgSession({
         conString: process.env.CONNECTION_STRING,
+        tableName:'session'
     }),
     secret:'oo_K(uOwN(k#|2Pm%+Sl>F(w/7k7|n',    
     resave: false,
-    saveUninitialized: true,
-    rolling: true,
-    cookie: {
-        maxAge: 60 * 60 * 1000, // 1 hora em milissegundos
-    },
+    saveUninitialized: true,   
 }))
 app.use(express.json())
 
