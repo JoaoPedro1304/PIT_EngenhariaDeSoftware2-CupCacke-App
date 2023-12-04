@@ -153,6 +153,3 @@ document.querySelector("#fechar button").addEventListener("click",()=>{
 
 
 
-    
-
-    
