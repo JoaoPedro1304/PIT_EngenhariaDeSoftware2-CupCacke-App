@@ -2,6 +2,7 @@ import express from "express";
 import session from 'express-session'
 import path from "path"
 import bodyParser from "body-parser";
+import pgSession from ("connect-pg-simple")(session)
 
 import router from './routes.js'
 
@@ -12,6 +13,9 @@ const __dirname = path.resolve()
 const app = express()
 
 app.use(session({
+    store: new pgSession({
+        conString: process.env.CONNECTION_STRING,
+      }),
     secret:'oo_K(uOwN(k#|2Pm%+Sl>F(w/7k7|n',    
     resave: false,
     saveUninitialized: true,
