@@ -6,13 +6,14 @@ import connectPgSimple from 'connect-pg-simple'
 import router from './routes.js'
 
 
-
 const __dirname = path.resolve()
+
+const pgSession = connectPgSimple(session)
 
 const app = express()
 
 app.use(session({
-    store: new connectPgSimple({
+    store: new pgSession({
         conString: process.env.CONNECTION_STRING,
     }),
     secret:'oo_K(uOwN(k#|2Pm%+Sl>F(w/7k7|n',    
