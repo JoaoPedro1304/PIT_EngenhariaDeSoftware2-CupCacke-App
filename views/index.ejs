@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<%- include('partials/head_index')%>
+
+
+<body>
+
+<%- include('partials/header_navbar')%>
+
+
+<!-- Janela Modal Carrinho de Compras -->
+<div id="janela-modal-carrinho">
+     
+    <div id="area-produto-carrinho">
+
+        <div id="fechar">
+            <button> X </button>
+        </div>
+
+        <div id="detalhes-produto-carrinho"> 
+
+            <div id="imagem-produto-carrinho">
+                <img  src="" alt="img">
+            </div>  
+
+            <div id="texto-produto-carrinho">
+                <div id="nome-produto-carrinho"></div>
+                <div id="categoria-produto-carrinho"></div>    
+            </div>
+
+            <div id="area-quantidade">
+                <div id="mais"> <button>+</button> </div>
+                <div id="quantidade">1</div>
+                <div id="menos"><button>-</button></div>
+            </div>  
+
+        </div>
+
+        <div id="area-produto-footer">
+            <button id="adicionar-carrinho-btn"> <a href=''>Adicionar ao Carrinho</a> </button>
+            <div id="sub-total">Sub Total R$</div>
+            <div id="valor"></div>
+        </div>
+
+    </div>
+    
+</div>    
+
+<main>
+
+    <div id="area-produto"> </div>
+
+</main>
+
+    
+
+
+<script src="js/index.js"></script>
+<script src="js/navbar.js"></script>
+</body>
+</html>

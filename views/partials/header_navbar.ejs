@@ -1,0 +1,97 @@
+<header>
+
+   <nav id="nav">
+      <button id="menu-button"> <img  src="imagens/icones/menu-burger.png" alt=""></button>
+      <a id="home-icone" href="/"> <img  src="imagens/icones/home.png" alt=""> </a>
+      <input id="busca" name="busca" type="text">
+      <button id="buscar-button"> <img src="imagens/icones/search.png" alt=""></button>
+      <button id="notificacao-button"><img src="imagens/icones/notificacao.png" alt=""></button>
+      <button id="suporte-button"> <img src="imagens/icones/suporte.png" alt=""></button>
+      <a id="carrinho-button" href="/carrinho"> <img src="imagens/icones/carrinho.png" alt=""></a>
+
+      <% if(typeof(usuario) != 'undefined') {%>
+
+      <button id="usuario-button"> <p id="nome-usuario"><%= usuario%></p> <img src="imagens/icones/usuario.png" alt=""></button>
+      <%} else {%>
+         <button id="usuario-button"> <img src="imagens/icones/usuario.png" alt=""></button>
+      <%}%>
+     
+   </nav>
+
+   <div id="notificacao-area">
+      <%if(typeof(notificacao) != 'undefined'){%>
+         <ul>            
+            <%notificacao.forEach((item=>{%>
+               <li>
+                  <%= item%> 
+               </li>
+            <%}))%>
+              
+         </ul>
+      <%}%>
+   </div>
+   
+   <div id="menu-content">
+         
+         <h3>Categorias</h3>
+
+        <ul id="menu-item">         
+         <li>
+            <button>Todas</button>
+         </li>
+         <li>
+            <button>Tradicional</button>
+         </li>
+         <li>
+            <button>Gourmet</button>
+         </li>
+         </ul>
+
+         <% if(typeof(admin) != 'undefined') {%>
+            
+         <h3>Cadastrar Produtos</h3>
+         
+         <ul>
+         <li>
+               <a href="/cadastrar-produtos">Cadastar Produtos</a> 
+         </li>
+                
+        </ul>
+        <%}%>
+
+   </div>
+
+    
+   <div id="usuario-area">
+         <% if(typeof(usuario) != 'undefined') {%>
+
+         <div id="usuario-menu-logado">
+            <ul>
+               <li>
+                  <a href="/perfil">Perfil</a>
+               </li>
+               <li>
+                  <a href="/sair">Sair</a>                     
+               </li>                  
+            </ul>
+         </div>
+
+      
+
+   <% }else{ %>
+
+         <div id="usuario-menu-login">
+            <ul>
+               <li>
+                  <a href="/login">login</a>                  
+               </li>
+               <li>
+                  <a href="/criar-conta">Criar Conta</a>
+               </li>
+            </ul>          
+
+         </div>      
+   <%  } %>
+</div> 
+  
+</header>
