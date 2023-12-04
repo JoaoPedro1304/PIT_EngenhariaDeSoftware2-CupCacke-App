@@ -3,12 +3,6 @@ const janela_modal_carrinho = document.querySelector("#janela-modal-carrinho")
 
 
 
-//if clicar no botao categoria o fetch ira passar aprametro com o nome da categoria para a rota
-
-    
-
-    
-
 
 fetch('/produto-salvo/api').then((response)=>{
 
@@ -39,9 +33,13 @@ fetch('/produto-salvo/api').then((response)=>{
     //Campo de pesquisa
    
     document.querySelector('#buscar-button').addEventListener('click',()=>{
+
         console.log(document.querySelector('#busca').value )
+
         let pesquisa = document.querySelector('#busca').value
+
         const regex = new RegExp(pesquisa, 'i')
+        
         produtos.map((item)=>{
             if(regex.test(item.querySelector('#nome-produto').innerHTML)){
 
