@@ -13,7 +13,12 @@ const app = express()
 
 app.use(session({
     secret:'oo_K(uOwN(k#|2Pm%+Sl>F(w/7k7|n',    
-    resave: false
+    resave: false,
+    saveUninitialized: true,
+    rolling: true,
+    cookie: {
+        maxAge: 60 * 60 * 1000, // 1 hora em milissegundos
+    },
 }))
 app.use(express.json())
 
