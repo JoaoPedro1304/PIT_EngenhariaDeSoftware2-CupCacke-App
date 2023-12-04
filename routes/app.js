@@ -13,7 +13,7 @@ const app = express()
 
 app.use(session({
     secret:'oo_K(uOwN(k#|2Pm%+Sl>F(w/7k7|n',    
-    saveUninitialized: true
+    resave: false
 }))
 app.use(express.json())
 
