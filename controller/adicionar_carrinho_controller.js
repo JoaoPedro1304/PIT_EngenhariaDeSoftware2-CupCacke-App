@@ -45,6 +45,7 @@ export async function buscar_carrinho(req,res){
 
     if(req.session.login){
 
+        console.log(req.session.login)
         const produtos_carrinho = await cliente.query(`SELECT carrinho.*, produtos.imagem FROM carrinho JOIN produtos on carrinho.produto = produtos.produto WHERE nome_usuario = '${req.session.login.usuario}'  `)
         
         res.render('carrinho',{title:'Carrinho', usuario:req.session.login.usuario,notificacao:req.session.login.notificacao, produtos:produtos_carrinho.rows})
