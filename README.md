@@ -1,4 +1,4 @@
-# Projeto Integrador de Engenharia de Software 2
+# Projeto Integrador Transdisciplinar de Engenharia de Software 2
 
 ## Primeira release: Deploy do site funcional com as funcionalidades básicas implementadas, o site pode ser acessado <a href = "https://fancy-teal-lemming.cyclic.app/"> clicando aqui</a> ou no menu a dirteita parte superior onde está escrito About(sobre).
 
