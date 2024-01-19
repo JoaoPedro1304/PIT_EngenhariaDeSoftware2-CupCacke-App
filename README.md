@@ -8,7 +8,7 @@
 
 ![Sem título](https://github.com/JoaoPedro1304/PIT_EngenhariaDeSoftware2-CupCacke-App/assets/98943339/5ea533e5-64f3-4fcc-9cf3-a5c28e2589af)
 
-**Para registrar produtos será necessário logar como admin, a opção para cadastrar produtos aparecerá no botão menu-burger **
+**Para registrar produtos será necessário logar como admin, a opção para cadastrar produtos aparecerá no botão menu-burger**
 - usuario admin : admin
 - senha admin: senhaadmin
   
