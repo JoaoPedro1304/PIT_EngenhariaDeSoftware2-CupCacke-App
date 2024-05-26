@@ -12,8 +12,8 @@
 ![1](https://github.com/JoaoPedro1304/PIT_EngenhariaDeSoftware2-CupCacke-App/assets/98943339/26dcfd42-6b8f-41a3-965b-09b617855f1f)
  
 **Técnologias usadas :**
-- backendd: Nodejs.
+- back end: Nodejs.
 - criptografia de senhas: Bcrypt.
 - Sessão de usuário: connect-pg-simple.
-- frontend: ejs.
+
 
